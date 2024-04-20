@@ -1,0 +1,151 @@
+.searchPanel {
+    width:100%;
+    margin:10px 0;
+    display:flex;
+}
+
+.searchPanel label {
+    width:90%;
+}
+
+.searchPanel label input {
+    border: 1px solid #ccc;
+    padding: 10px 15px 10px 40px;
+    line-height: 36px;
+    width: calc(100% - 80px);
+    background: url('./images/search.png') no-repeat 10px 16px;
+}
+
+.searchPanel button{
+    line-height: 36px;
+    padding:10px;
+    background: url('./images/filter.png') no-repeat center;
+    width:57px;
+    cursor:pointer;
+}
+
+.overlay {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: -99999px;
+    display:none;
+    opacity:0;
+    z-index:10;
+    background: rgba(0,0,0,.8);
+    transition: opacity .3s ease-in;
+}
+
+.modal {
+    opacity:0;
+    left: -99999px;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    background: #fff;
+    border:1px solid #ccc;
+    width:fit-content;
+    height:fit-content;
+    overflow: hidden;
+    z-index: 11;
+    box-shadow: 10px 5px 20px rgba(0,0,0,.2);
+    transition: opacity .3s ease-in;
+}
+
+.modal.show,
+.overlay.show {
+    opacity:1;
+    left:0;
+    display:block;
+}
+
+.modal .modal-head {
+    width:100%;
+    padding:10px 0;
+    background:#1976d2;
+    color:#fff;
+    text-align: center;
+    position:relative;
+}
+
+.modal .modal-head button {
+    position:absolute;
+    width:26px;
+    height:26px;
+    border:1px solid #fff;
+    background: #fff;
+    right:6px;
+    top:6px;  
+    cursor:pointer;  
+}
+
+.modal .modal-head button:after {
+    content: "+";
+    position:absolute;
+    rotate: 45deg;
+    font-size: 36px;
+    top: -7px;
+    left: 0;
+    right: 0;
+}
+
+.modal form {
+    margin:15px;
+
+}
+
+.modal form div.label {
+    width:100%;
+    gap:15px;
+    display:flex;
+}
+
+.modal form .rangeGroup {
+    width: 33.333%;
+}
+
+.modal form .rangeGroup input {
+    width:100%;
+    margin-bottom:10px;
+}
+
+.modal form .rangeGroup datalist {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:10px;
+    width:100%;
+}
+
+.modal form .rangeGroup datalist .curValue {
+    font-size:12px;
+    font-weight: bold;
+}
+
+.modal .buttons {
+    display:flex;
+    gap:30px;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.modal .buttons button {
+    background: #1976d2;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+.modal .buttons button:hover {
+    background: #1e88e5;
+}
+.modal .buttons button:disabled {
+    background:#999;
+    cursor:not-allowed;
+}
