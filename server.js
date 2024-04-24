@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
-import FetchServer from './back/modules/fetchServer/index.js';
-import schema from './back/modules/fetchServer/schema/index.js';
+import Fetch from './back/modules/Fetch/index.js';
+import schema from './back/modules/Fetch/schema/index.js';
 import { MongoClient, ObjectId } from 'mongodb';
 import config from './back/params/config.js';
 

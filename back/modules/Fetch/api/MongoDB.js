@@ -4,7 +4,7 @@ import Controll from './Controll.js';
 
 export default class MongoDB 
 {
-    static #DBNAME = 'group10'; // Имя базы данных
+    static #DBNAME = 'proect_111'; // Имя базы данных
     static #LOCATION = 'mongodb://localhost'; //Адрес === 127.0.0.1
     static #PORT = 27017; //Порт
     static #LOGIN;
