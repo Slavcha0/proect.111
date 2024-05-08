@@ -141,20 +141,20 @@ export default function Table({nameTable, onChange, query = ''}) {
             value = sim[col.collectionName].filter(item => item._id === col._id)[0].TITLE;
         }
 
-        if(curSchema.type === 'Phone') {
-            let callTo = 'tel:' + col;
-            value = <a href={callTo}>{col}</a>
+        if(curSchema.type === 'Tanks') {
+            let tank = 'tanks' + col;
+            value = <a href={tank}>{col}</a>
         }
 
-        if(curSchema.type === 'Email') {
-            let mailTo = 'mailto:' + col;
-            value = <a href={mailTo}>{col}</a>
-        }
+        // if(curSchema.type === 'Email') {
+        //     let mailTo = 'mailto:' + col;
+        //     value = <a href={mailTo}>{col}</a>
+        // }
 
-        if(curSchema.type === 'Date') {
-            let date = new Date(col);
-            value = new Intl.DateTimeFormat('ru').format(date);
-        }
+        // if(curSchema.type === 'Date') {
+        //     let date = new Date(col);
+        //     value = new Intl.DateTimeFormat('ru').format(date);
+        // }
 
         return (
             <td key={index}>

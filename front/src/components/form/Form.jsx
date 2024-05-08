@@ -1,3 +1,4 @@
+import Editor from "react-simple-wysiwyg";
 import { useEffect, useState } from "react";
 import InputMask from 'react-input-mask';
 import DatePicker from 'react-datepicker';
@@ -6,6 +7,7 @@ import './style.css';
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from  "react-datepicker";
 import { ru } from 'date-fns/locale/ru';
+
 registerLocale('ru-RU', ru)
 
 export default function Form({nameForm, arValue}) {
@@ -15,6 +17,7 @@ export default function Form({nameForm, arValue}) {
     const [edit, setEdit] = useState(false); 
     const [disabled, setDisabled] = useState(true);
     const [startDate, setStartDate] = useState(new Date());
+    const [html, setHtml] = useState('');
 
     useEffect(
         () => {
@@ -75,25 +78,16 @@ export default function Form({nameForm, arValue}) {
                     newRow.field = 'field';
                 break;
 
-                case "Number":
-                    newRow.fieldType = 'number';
-                    newRow.field = 'field';
-                break;
 
-                case "Email":
-                    newRow.fieldType = 'email';
-                    newRow.field = 'field';
-                break;
 
-                case 'Date':
-                    newRow.fieldType = 'date';
-                    newRow.field = 'date';
-                break;
 
-                case "Phone":
-                    newRow.fieldType = 'tel';
-                    newRow.field = 'tel';
-                break;
+
+
+
+                case "Text":
+                    newRow.fieldType = "text";
+                    newRow.field = "text";
+                    break;
 
                 case "DBRef":
                     newRow.fieldType = 'select';
@@ -130,6 +124,18 @@ export default function Form({nameForm, arValue}) {
                                     onChange={item.sim && callMethod}
                                     name={item.code} />
                             }
+
+                            {item.field === "text" && (
+                            <>
+                                <Editor value={html} onChange={onChangeHTML} />
+                                <textarea
+                                    name={item.code}
+                                    value={html}
+                                    className="hidden"
+                                    defaultValue={html}
+                                ></textarea>
+                            </>
+                        )}
 
                             {
                                 item.field === 'select' && <select name={item.code}>{item.list}</select>
@@ -209,6 +215,10 @@ export default function Form({nameForm, arValue}) {
 
         if(error == 0) 
             setDisabled(false);
+    }
+
+    function onChangeHTML(e) {
+        setHtml(e.target.value);
     }
 
     return (

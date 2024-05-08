@@ -8,7 +8,7 @@ export default function Menu({ curPath }) {
 
     const fetchMenu = useCallback(async () => {
         setLoading(true);
-        const response = await fetch(config.api + 'Menu/');
+        const response = await fetch(config.api + 'get/Menu/');
         const answer = await response.json();
         setData(answer.data);
         setLoading(false);
