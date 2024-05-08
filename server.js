@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 app.get('/api/get/:CollectionName/', async (req, res) => {
     let collectionName = req.params.CollectionName.toLowerCase();
     let options = {};
-    let mdb = new FetchServer.MDB(collectionName);
+    let mdb = new Fetch.MongoDB(collectionName);
 
     console.log(collectionName, req.query);
     if(req.query) {
@@ -64,13 +64,13 @@ app.get('/api/get/:CollectionName/', async (req, res) => {
         }
     }
 
-    let result = await mdb.getValue(options);
+    let result = await mdb.get(options);
 
     res.end(JSON.stringify(result));
 });
 
 app.get('/api/get/collection/list/', async(req, res) => {
-    let mdb = new FetchServer.MDB();
+    let mdb = new Fetch.MongoDB();
     await mdb.getCollectionStats().then(result => {
         res.end(JSON.stringify(result));
     });
@@ -85,9 +85,9 @@ app.get('/api/get/schema/:Name/', async (req, res) => {
 //POST REquest
 app.post('/api/post/:CollectionName/', async (req, res) => {
     const collectionName = req.params.CollectionName.toLowerCase();
-    let mdb = new FetchServer.MDB(collectionName);
+    let mdb = new Fetch.MongoDB(collectionName);
 
-    const result = await mdb.setValue(req.body);
+    const result = await mdb.set(req.body);
 
     if(result.acknowledged) {
         let newUrl = config.client + collectionName + '?id=' + String(result.insertedId);
@@ -99,7 +99,7 @@ app.post('/api/post/:CollectionName/', async (req, res) => {
 //DELETE request
 app.get('/api/:CollectionName/:id/', async (req, res) => {
     let collectionName = req.params.CollectionName.toLowerCase();
-    let mdb = new FetchServer.MDB(collectionName);
+    let mdb = new Fetch.MongoDB(collectionName);
     mdb.removeValue(req.params.id);
     res.end('deleted');
 });

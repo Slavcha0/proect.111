@@ -18,7 +18,7 @@ export default function Index() {
 
     const fetchTable = useCallback(async () => {
         setLoading(true);
-        const response = await fetch(config.api+ 'get/collections/');
+        const response = await fetch(config.api+ 'get/collection/list/');
         let answer = await response.json();
 
         let labels = [];

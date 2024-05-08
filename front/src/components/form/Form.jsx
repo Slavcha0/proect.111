@@ -392,7 +392,6 @@ export default function Form({ nameForm, arValue = {} }) {
                                 required={item.require ? true : false}
                                 defaultValue={item.value && item.value}
                                 onChange={item.sim && callMethod}
-                                onKeyUp={item.code === "TITLE" && nameSimbol}
                                 readOnly={item.readOnly && true}
                                 step={
                                     item.step > 0
@@ -444,13 +443,6 @@ export default function Form({ nameForm, arValue = {} }) {
         console.log(schema);
         return [];
     }
-
-     function nameSimbol(event) {
-         let form = event.target.closest("form");
-         let codeField = form.querySelector("input[name=CODE]");
-         if(codeField)
-             codeField.value = slugify(event.target.value, "_");
-     }
 
     function callMethod(event) {
         let form = event.target.closest("form");
