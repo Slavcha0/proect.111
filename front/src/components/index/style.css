@@ -1,0 +1,22 @@
+
+
+header .text {
+    display:flex;
+    flex-wrap:wrap;
+    width:300px;
+}
+
+
+
+header .text h1 {
+    font-size:10px;
+}
+
+/* header menu {
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+    gap: 20px;
+    line-height: 30px;
+} */

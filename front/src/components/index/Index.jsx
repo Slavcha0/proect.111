@@ -76,29 +76,17 @@ export default function Index() {
 
     return (
         <>
-            <table className='simple-table'>
-                <thead>
-                    <tr>
-                        <th>Коллекция</th>
-                        <th>Индексы</th>
-                        <th>Кол-во документов</th>
-                    </tr>
-                </thead>
+           <div className="text">
+            <h1>Танк — бронированная боевая машина, чаще всего на гусеничном ходу, как правило с пушечным и дополнительным пулемётным вооружением,  обычно установленным во вращающейся полноповоротной башне, предназначенным, в основном, для стрельбы прямой наводкой.
 
-                <tbody>
-                    {
-                        !loading && table.body.map((row, key) => (
-                            <tr key={key}>
-                                {Object.values(row).map((col, index )=> (
-                                    <td key={index}>{col}</td>
-                                ))}
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+На ранних стадиях развития танкостроения иногда выпускали танки с исключительно пулемётным вооружением, а после Второй мировой войны проводились эксперименты по созданию танков с ракетным вооружением в качестве основного. Известны варианты танков с огнемётным вооружением. Определения танка, как боевой машины, были разными в разных армиях, так как назначение и способы их применения в разные эпохи менялись.</h1>
 
-            <div>
+
+           </div>
+
+     
+
+            {/* <div>
                 <h2>Количество документов</h2>
             <CChart
                 type="doughnut"
@@ -146,6 +134,22 @@ export default function Index() {
                     },
                 }}
                 />
+            </div> */}
+            <div className="Dovoen">
+        <button onClick={() => this.baz()}>1</button>
+        
+            </div>
+            <div className="Voen">
+        <button onClick={() => this.baz()}>2</button>
+        
+            </div>
+            <div className=" Poslevoen">
+        <button onClick={() => this.baz()}>3</button>
+        
+            </div>
+            <div className=" Sovrem">
+        <button onClick={() => this.baz()}>4</button>
+        
             </div>
         </>
     )
