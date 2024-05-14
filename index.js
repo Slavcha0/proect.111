@@ -54,6 +54,10 @@ const server = http.createServer(function(req, res) {
             basePath = '/index.html';
         break;
 
+        case '/tanks':
+            basePath = createPath('tanks');
+        break;
+
         case '/brands':
             basePath = createPath('brands');
         break;
