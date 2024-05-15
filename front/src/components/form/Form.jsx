@@ -178,7 +178,7 @@ export default function Form({nameForm, arValue}) {
                                 />
                             }
                         </label>
-                        </>
+                        </label>
                     ))
                 }
             </>

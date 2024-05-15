@@ -4,6 +4,7 @@ import Logo from '../../images/logo.png';
 import './style.css';
 import Menu from '../menu/Menu.jsx';
 
+
 export default function Header({ curPath }) {
     /**
      * Правила работы с хуками

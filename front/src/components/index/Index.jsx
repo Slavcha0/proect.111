@@ -5,6 +5,7 @@ import '../table/style.css';
 import Editor from 'react-simple-wysiwyg';
 
 
+
 export default function Index() {
     const [table, setTable] = useState({
         body: []
@@ -87,151 +88,26 @@ export default function Index() {
 
      
 
-            {/* <div>
-                <h2>Количество документов</h2>
-            <CChart
-                type="doughnut"
-                data={{
-                    labels: pie.labels,
-                    datasets: [
-                    {
-                        backgroundColor: getColors(pie.count),
-                        data: pie.numbers,
-                    },
-                    ],
-                }}
-                options={{
-                    plugins: {
-                    legend: {
-                        labels: {
-                        //color: getStyle('--cui-body-color'),
-                        }
-                    }
-                    },
-                }}
-                />
-            </div>
-            
-            <div>
-                <h2>Индексы</h2>
-            <CChart
-                type="doughnut"
-                data={{
-                    labels: pie.labels,
-                    datasets: [
-                    {
-                        backgroundColor: getColors(pie.count),
-                        data: pie.indexes,
-                    },
-                    ],
-                }}
-                options={{
-                    plugins: {
-                    legend: {
-                        labels: {
-                        //color: getStyle('--cui-body-color'),
-                        }
-                    }
-                    },
-                }}
-                />
-            </div> */}
+           
             <div className="Dovoen">
-        <button onClick={() => this.baz()}>1</button>
+        <button onClick={() => this.dov()}>Довоенная эпоха</button>
         
             </div>
             <div className="Voen">
-        <button onClick={() => this.baz()}>2</button>
+        <button onClick={() => this.voen()}>Военная эпоха</button>
         
             </div>
             <div className=" Poslevoen">
-        <button onClick={() => this.baz()}>3</button>
+        <button onClick={() => this.pos()}>Послевоенная эпоха</button>
         
             </div>
-            <div className=" Sovrem">
-        <button onClick={() => this.baz()}>4</button>
+           
         
-            </div>
+            
 
         </>
 
         
-        // <>
-        // <div ClassName ="sss">
-        //     <h1></h1>
-        // </div>
-
-        //     <table className='simple-table'>
-        //         <thead>
-        //             <tr>
-        //                 <th>Коллекция</th>
-        //                 <th>Индексы</th>
-        //                 <th>ntrckdnds</th>
-        //             </tr>
-        //         </thead>
-
-        //         <tbody>
-        //             {
-        //                 !loading && table.body.map((row, key) => (
-        //                     <tr key={key}>
-        //                         {Object.values(row).map((col, index )=> (
-        //                             <td key={index}>{col}</td>
-        //                         ))}
-        //                     </tr>
-        //                 ))
-        //             }
-        //         </tbody>
-        //     </table>
-
-        //     <div>
-        //         <h2>Количество документов</h2>
-        //     <CChart
-        //         type="doughnut"
-        //         data={{
-        //             labels: pie.labels,
-        //             datasets: [
-        //             {
-        //                 backgroundColor: getColors(pie.count),
-        //                 data: pie.numbers,
-        //             },
-        //             ],
-        //         }}
-        //         options={{
-        //             plugins: {
-        //             legend: {
-        //                 labels: {
-        //                 //color: getStyle('--cui-body-color'),
-        //                 }
-        //             }
-        //             },
-        //         }}
-        //         />
-        //     </div>
-            
-        //     <div>
-        //         <h2>Индексы</h2>
-        //     <CChart
-        //         type="doughnut"
-        //         data={{
-        //             labels: pie.labels,
-        //             datasets: [
-        //             {
-        //                 backgroundColor: getColors(pie.count),
-        //                 data: pie.indexes,
-        //             },
-        //             ],
-        //         }}
-        //         options={{
-        //             plugins: {
-        //             legend: {
-        //                 labels: {
-        //                 //color: getStyle('--cui-body-color'),
-        //                 }
-        //             }
-        //             },
-        //         }}
-        //         />
-        //     </div>
-        // </>
+       
     )
 }
