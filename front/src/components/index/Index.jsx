@@ -2,6 +2,8 @@ import { useCallback, useState, useEffect } from "react";
 import config from "../../params/config.js";
 import { CChart } from '@coreui/react-chartjs';
 import '../table/style.css';
+import Editor from 'react-simple-wysiwyg';
+
 
 
 export default function Index() {
@@ -86,71 +88,29 @@ export default function Index() {
 
      
 
-            {/* <div>
-                <h2>Количество документов</h2>
-            <CChart
-                type="doughnut"
-                data={{
-                    labels: pie.labels,
-                    datasets: [
-                    {
-                        backgroundColor: getColors(pie.count),
-                        data: pie.numbers,
-                    },
-                    ],
-                }}
-                options={{
-                    plugins: {
-                    legend: {
-                        labels: {
-                        //color: getStyle('--cui-body-color'),
-                        }
-                    }
-                    },
-                }}
-                />
-            </div>
-            
-            <div>
-                <h2>Индексы</h2>
-            <CChart
-                type="doughnut"
-                data={{
-                    labels: pie.labels,
-                    datasets: [
-                    {
-                        backgroundColor: getColors(pie.count),
-                        data: pie.indexes,
-                    },
-                    ],
-                }}
-                options={{
-                    plugins: {
-                    legend: {
-                        labels: {
-                        //color: getStyle('--cui-body-color'),
-                        }
-                    }
-                    },
-                }}
-                />
-            </div> */}
+           
             <div className="Dovoen">
-        <button onClick={() => this.tanks()}>1</button>
+
+
+        <button onClick={() => this.dov()}>Довоенная эпоха</button>
+
         
             </div>
             <div className="Voen">
-        <button onClick={() => this.baz()}>2</button>
+        <button onClick={() => this.voen()}>Военная эпоха</button>
         
             </div>
             <div className=" Poslevoen">
-        <button onClick={() => this.baz()}>3</button>
+        <button onClick={() => this.pos()}>Послевоенная эпоха</button>
         
             </div>
-            <div className=" Sovrem">
-        <button onClick={() => this.baz()}>4</button>
+           
         
-            </div>
+            
+
         </>
+
+        
+       
     )
 }
