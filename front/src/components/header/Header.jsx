@@ -29,7 +29,8 @@ export default function Header({ curPath }) {
         <header>
             <div className='LogoGroup'>
             <img src={Logo} width="30px" alt='' />
-            <h1>жесточайший мощнейши проект 3000</h1>
+
+            <h1>библиотека</h1>
             </div>
             
             <Menu curPath={curPath} />

@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect } from "react";
 import config from "../../params/config.js";
 import { CChart } from '@coreui/react-chartjs';
 import '../table/style.css';
+import Editor from 'react-simple-wysiwyg';
 
 
 export default function Index() {
@@ -151,6 +152,86 @@ export default function Index() {
         <button onClick={() => this.baz()}>4</button>
         
             </div>
+
         </>
+
+        
+        // <>
+        // <div ClassName ="sss">
+        //     <h1></h1>
+        // </div>
+
+        //     <table className='simple-table'>
+        //         <thead>
+        //             <tr>
+        //                 <th>Коллекция</th>
+        //                 <th>Индексы</th>
+        //                 <th>ntrckdnds</th>
+        //             </tr>
+        //         </thead>
+
+        //         <tbody>
+        //             {
+        //                 !loading && table.body.map((row, key) => (
+        //                     <tr key={key}>
+        //                         {Object.values(row).map((col, index )=> (
+        //                             <td key={index}>{col}</td>
+        //                         ))}
+        //                     </tr>
+        //                 ))
+        //             }
+        //         </tbody>
+        //     </table>
+
+        //     <div>
+        //         <h2>Количество документов</h2>
+        //     <CChart
+        //         type="doughnut"
+        //         data={{
+        //             labels: pie.labels,
+        //             datasets: [
+        //             {
+        //                 backgroundColor: getColors(pie.count),
+        //                 data: pie.numbers,
+        //             },
+        //             ],
+        //         }}
+        //         options={{
+        //             plugins: {
+        //             legend: {
+        //                 labels: {
+        //                 //color: getStyle('--cui-body-color'),
+        //                 }
+        //             }
+        //             },
+        //         }}
+        //         />
+        //     </div>
+            
+        //     <div>
+        //         <h2>Индексы</h2>
+        //     <CChart
+        //         type="doughnut"
+        //         data={{
+        //             labels: pie.labels,
+        //             datasets: [
+        //             {
+        //                 backgroundColor: getColors(pie.count),
+        //                 data: pie.indexes,
+        //             },
+        //             ],
+        //         }}
+        //         options={{
+        //             plugins: {
+        //             legend: {
+        //                 labels: {
+        //                 //color: getStyle('--cui-body-color'),
+        //                 }
+        //             }
+        //             },
+        //         }}
+        //         />
+        //     </div>
+        // </>
     )
 }
