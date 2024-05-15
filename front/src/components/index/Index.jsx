@@ -136,7 +136,7 @@ export default function Index() {
                 />
             </div> */}
             <div className="Dovoen">
-        <button onClick={() => this.baz()}>1</button>
+        <button onClick={() => this.tanks()}>1</button>
         
             </div>
             <div className="Voen">
