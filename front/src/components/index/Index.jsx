@@ -86,25 +86,24 @@ export default function Index() {
 
            </div>
 
+
      
 
-           
-            <div className="Dovoen">
+      
+            
 
+                    <div className="Dovoen">
+                <button onClick={() => this.dov()}>Довоенная эпоха</button>
+                    </div>
 
-        <button onClick={() => this.dov()}>Довоенная эпоха</button>
+                    <div className="Voen">
+                <button onClick={() => this.voen()}>Военная эпоха</button>
+                    </div>
 
-        
-            </div>
-            <div className="Voen">
-        <button onClick={() => this.voen()}>Военная эпоха</button>
-        
-            </div>
-            <div className=" Poslevoen">
-        <button onClick={() => this.pos()}>Послевоенная эпоха</button>
-        
-            </div>
-           
+                    <div className=" Poslevoen">
+                <button onClick={() => this.pos()}>Послевоенная эпоха</button>
+                    </div>
+            
         
             
 

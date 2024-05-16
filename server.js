@@ -72,7 +72,7 @@ app.get('/api/get/:CollectionName/', async (req, res) => {
 app.get('/api/get/collection/list/', async(req, res) => {
     let mdb = new Fetch.MongoDB();
 
-    await mdb.getCollectionStats(result => {
+    await getCollectionStats().then(result => {
         res.end(JSON.stringify(result));
     });
 });

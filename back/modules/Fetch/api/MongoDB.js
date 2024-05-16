@@ -24,6 +24,9 @@ export default class MongoDB
         
         console.info('DB connect success');
     }
+    changeCollection(collectionName) {
+        this.collection = this.db.collection(collectionName);
+    }
 
     async count() {
         try {
